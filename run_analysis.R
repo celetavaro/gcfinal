@@ -1,20 +1,29 @@
 # Part I:  read in data sets and merge them
-
 xtest <- read.table("./data/test/X_test.txt")
-
-ytest <- read.table("./data/test/y_test.txt")
-
-stest <- read.table("./data/test/subject_test.txt")
-
+  ytest <- read.table("./data/test/y_test.txt")
+    stest <- read.table("./data/test/subject_test.txt")
+    
 xtrain <- read.table("./data/train/X_train.txt")
+  ytrain <- read.table("./data/train/y_train.txt")
+    strain <- read.table("./data/train/subject_train.txt")
 
-ytrain <- read.table("./data/train/y_train.txt")
+names(stest) <- "subjectID"
+  names(ytest) <- "activity"
 
-strain <- read.table("./data/train/subject_train.txt")
+names(strain) <- "subjectID"
+  names(ytrain) <- "activity"
+  
+# merge test set
+testdata <- cbind(ytest, xtest)
+  testdata <- cbind(stest, testdata)
 
-# NOTE:  change names from V1 to descriptive before cbinidning 
-  # all have first col. vectors loaded as "V1"
-
+# merge training set
+traindata <- cbind(ytrain, ytest)
+  traindata <- cbind(strain, traindata)
+  
+# merge both sets into one big set. NOTE: rbind for this one
+  
+  
 
 # Part II:  Extract measurements only on the mean and std of each measurement
 
