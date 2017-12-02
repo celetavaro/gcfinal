@@ -3,3 +3,5 @@ data/
 
 UCI HAR Dataset/
 *.pdf
+
+\.Rhistory
