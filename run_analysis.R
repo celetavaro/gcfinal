@@ -33,10 +33,10 @@ dset <- rbind(testdata, traindata)
     
     # Vectors are in vector.txt file
 
-# Part III:  Descriptive Activity Names for activities in dataset
+    # Descriptive Activity Names for activities in dataset
     
-    #lookup vector
     lookup <- c("walking", "upstairs", "downstairs", "sitting", "standing", "laying")
+    dset$activity <- lookup[dset$activity]
 
 # Part IV:  Dataset should have appropriate/descriptive variable names
 
