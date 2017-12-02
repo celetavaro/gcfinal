@@ -21,9 +21,12 @@ testdata <- cbind(ytest, xtest)
 traindata <- cbind(ytrain, ytest)
   traindata <- cbind(strain, traindata)
   
-# merge both sets into one big set. NOTE: rbind for this one
-  
-  
+# merge both sets into one big set. 
+dset <- rbind(testdata, traindata)
+
+# to get the subjectID's in order
+dset <- dset[order(dset$subjectID), ]
+
 
 # Part II:  Extract measurements only on the mean and std of each measurement
 
