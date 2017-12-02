@@ -31,9 +31,12 @@ dset <- rbind(testdata, traindata)
 
 # Part II:  Extract measurements only on the mean and std of each measurement
     
-# Vectors are in vector.txt file
+    # Vectors are in vector.txt file
 
 # Part III:  Descriptive Activity Names for activities in dataset
+    
+    #lookup vector
+    lookup <- c("walking", "upstairs", "downstairs", "sitting", "standing", "laying")
 
 # Part IV:  Dataset should have appropriate/descriptive variable names
 
