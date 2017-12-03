@@ -7,7 +7,7 @@ fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
         download.file(fileURL, filename, method = "curl")
         unzip(filename)
     }
-# read in data sets 
+# read in data sets
 xtest <- read.table( file.path(datadir, "test", "X_test.txt"))
   ytest <- read.table( file.path(datadir,"test","y_test.txt"))
     stest <- read.table( file.path(datadir, "test", "subject_test.txt"))
@@ -32,8 +32,11 @@ testdata <- cbind(stest, ytest, xtest)
 dset <- rbind(testdata, traindata)
     # to get the subjectID's in order
     dset <- dset[order(dset$subjectID), ]
-
-
+    
+# TODO:  read in features file and use this to name the columns 
+# features[,2] will have the names  
+    
+    
 # Part II:  Extract measurements only on the mean and std of each measurement
     # use grep/grepl to pick the cols with[Mm]ean or [Ss]td
     
@@ -42,10 +45,8 @@ lookup <- c("walking", "upstairs", "downstairs", "sitting", "standing", "laying"
 dset$activity <- lookup[dset$activity]
 
 # Part IV:  Dataset should have appropriate/descriptive variable names
-  # TODO:  read in features file and use this to name the columns 
-  # features[,2] will have the names
-
+   # TODO:  gsub() to format names properly
 
 # Part V:  From the data set in step 4, creates a second, independent tidy data set 
 #   with the average of each variable for *each activity* and *each subject*.
-# use write.table to create .txt file with new tidy dataset and read.table to look at tidy data
+#   use write.table to create .txt file with new tidy dataset and read.table to look at tidy data
