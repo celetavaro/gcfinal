@@ -1,6 +1,6 @@
 # Getting and Cleaning Data Course Project
 
-An interesting source of data is mobile and wearable technology that track the user's activities and movement.  This project uses data from a Galaxy S smartphone.  The data in this project contains information collected by the Accelerometer and Gyroscope on the smartphone.  The data has been merged, cleaned, and finally made into a tidy dataset.
+An interesting source of data is mobile and wearable technology that track the user's activities and movement.  This project uses data from a Galaxy S smartphone.  The data in this project contains information collected by the Accelerometer and Gyroscope on the smartphone.  The data has been merged, cleaned, and finally made into an independent tidy dataset for future analysis.
 
 More information on this can be found here: 
 
