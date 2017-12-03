@@ -1,3 +1,11 @@
+# URL for data - add download/check/unzip, etc.
+# https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+# afer unzip: "UCI HAR Dataset" with subdirs /test and /train
+
+
+# read in features file and use this to name the columns features[,2] will have the names
+
+
 # read in data sets 
 xtest <- read.table("./data/test/X_test.txt")
   ytest <- read.table("./data/test/y_test.txt")
@@ -31,7 +39,7 @@ dset <- rbind(testdata, traindata)
 
 # Part II:  Extract measurements only on the mean and std of each measurement
     
-    # Vectors are in vector.txt file
+    # use grep/grepl to pick the cols with[Mm]ean or [Ss]td
 
     # Descriptive Activity Names for activities in dataset
     
@@ -42,3 +50,4 @@ dset <- rbind(testdata, traindata)
 
 # Part V:  From the data set in step 4, creates a second, independent tidy data set 
 #   with the average of each variable for *each activity* and *each subject*.
+# use write.table to create .txt file with new tidy dataset and read.table to look at tidy data
