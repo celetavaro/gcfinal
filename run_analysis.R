@@ -52,7 +52,20 @@
         dset$activity <- lookup[dset$activity]
 
 # Part IV:  Dataset should have appropriate/descriptive variable names
-   # TODO:  gsub() to format names properly
+    # TODO:  gsub() to format names properly
+    cleanNames <- names(dset)
+      # remove ( ), - from names
+      cleanNames <- gsub("[//(//)-]", "", cleanNames)
+      
+      # rename various terms for clarity and readability
+      cleanNames <- gsub("^f", "freq", cleanNames)
+      cleanNames <- gsub("^t", "time", cleanNames)
+      cleanNames <- gsub("Acc", "Accel", cleanNames)
+      cleanNames <- gsub("mean", "Mean", cleanNames)
+      cleanNames <- gsub("std", "Std", cleanNames)
+      
+      names(dset) <- cleanNames
+    
 
 # Part V:  From the data set in step 4, creates a second, independent tidy data set 
 #   with the average of each variable for *each activity* and *each subject*.
