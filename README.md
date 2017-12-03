@@ -18,3 +18,7 @@ The raw dataset can be obtained here:
 | codebook.md | the codebook for the project |
 | run_analysis.R | The R scripts that processes the data |
 | tidy_data.txt | The tidy dataset produced by the run_analysis.R |
+
+### Packages
+
+This project uses the dplyr package
