@@ -66,8 +66,17 @@
       
       names(dset) <- cleanNames
     
-
 # Part V:  From the data set in step 4, creates a second, independent tidy data set 
 #   with the average of each variable for *each activity* and *each subject*.
-#   use write.table to create .txt file with new tidy dataset and read.table to 
-#   look at tidy data (include in codebook)
+
+library(dplyr)
+      
+setMeans  <- dset %<%
+  group_by(subjectID, activity) %>%
+  summarise_all(funs(mean))
+  
+write.table(setMeans, file = "tidy_data.txt", row.names = FALSE, quote = FALSE)
+      
+      
+      
+      
