@@ -28,14 +28,18 @@ testdata <- cbind(stest, ytest, xtest)
     # merge training set
     traindata <- cbind(strain, ytrain, xtrain)
   
-# merge both sets into one big set. 
+# merge both sets into one 
 dset <- rbind(testdata, traindata)
     # to get the subjectID's in order
     dset <- dset[order(dset$subjectID), ]
     
-# TODO:  read in features file and use this to name the columns 
-# features[,2] will have the names  
-    
+# read in features info (column names) and assign to columns
+features <- read.table( file.path(datadir, "features.txt"))
+    features[, 2] <- as.character(features[, 2])
+        names(dset) <- c("subjectID", "activity", features[, 2]) 
+        
+# remove old dataframes to free memory
+rm('stest', 'strain', 'xtest', 'xtrain', 'ytest', 'ytrain', 'testdata', 'traindata')
     
 # Part II:  Extract measurements only on the mean and std of each measurement
     # use grep/grepl to pick the cols with[Mm]ean or [Ss]td
