@@ -42,11 +42,13 @@ features <- read.table( file.path(datadir, "features.txt"))
 rm('stest', 'strain', 'xtest', 'xtrain', 'ytest', 'ytrain', 'testdata', 'traindata')
     
 # Part II:  Extract measurements only on the mean and std of each measurement
-    # use grep/grepl to pick the cols with[Mm]ean or [Ss]td
+    
+keep <- grepl("subjectID|activity|mean|std", names(dset))
+    dset <- dset[, keep]
     
 # Descriptive Activity Names for activities in dataset
 lookup <- c("walking", "upstairs", "downstairs", "sitting", "standing", "laying")
-dset$activity <- lookup[dset$activity]
+    dset$activity <- lookup[dset$activity]
 
 # Part IV:  Dataset should have appropriate/descriptive variable names
    # TODO:  gsub() to format names properly
