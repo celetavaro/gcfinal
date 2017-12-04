@@ -5,3 +5,5 @@ UCI HAR Dataset/
 *.pdf
 
 \.Rhistory
+
+tidy_data\.txt
