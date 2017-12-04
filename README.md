@@ -2,7 +2,7 @@
 
 An interesting source of data is mobile and wearable technology that track the user's activities and movement.  This project uses data from a Galaxy S smartphone.  The data in this project contains information collected by the Accelerometer and Gyroscope on the smartphone.  The data has been merged, cleaned, and finally made into an independent tidy dataset for future analysis.
 
-More information on this can be found here: 
+More information on this datset can be found here: 
 
 	http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
@@ -22,3 +22,5 @@ The raw dataset can be obtained here:
 ### Packages
 
 This project uses the dplyr package (version 3.4.2)
+
+
