@@ -14,10 +14,10 @@ The script run_analysis.R peforms the following transformations on the raw data:
   * merges the test and training datasets into a single dataset
   * re-assigns the integer values for the 'activity' variable to descriptive names
     * i.e. 1 is transformed to "walking"
+  * assigns descriptive variable names and formats them for clarity/readability
     * values starting with "t" or "f" were transformed to start with "time" or "freq" respetively
     * values containing "Acc" were transformed to "Accel"
     * values containing "mean" or "std" were transformed to "Mean" and "Std" respectively for readability
-  * assigns descriptive variable names and formats them for clarity/readability
   * extracts only the columns that measure mean or std (standard deviation) for each measurement
   * creates a separate independent dataset that gives the average of each variable grouped by subject and activity
   * writes the new dataset to the file tidy_data.txt
@@ -39,11 +39,11 @@ Abbreviated names were chosen to avoid excessively long variable names.
   * subjectID: the integer value representing each subject's data. (integer values 1-30)
   * activity:  the activity that the subject was doing during measurement (for activity codes see Activity List below)
   
-### Time Domain:
+#### Time Domain:
 
 
 
-### Frequency Domain:
+#### Frequency Domain:
 
 
 
