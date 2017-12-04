@@ -1,6 +1,6 @@
 # Codebook for the tidy_data.txt dataset
 
-#### Data Source: 
+#### Raw Data Source: 
 
 [Human Activity Recognition Using Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 (from the UCI archives)
