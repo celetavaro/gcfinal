@@ -28,7 +28,7 @@ To load the tidy_data.txt file in R, use the read.table() function since it was 
 ### Variables
 
 Measurements in this dataset come from the Galaxy S smartphone's Gyroscope and Accelerometer in the X, Y, and Z planes
-(X, Y, Z appended to end of measurement in that direction). Variable names that are in the time domain start with the 
+(X, Y, Z appended to end of variable name in each direction). Variable names that are in the time domain start with the 
 string "time", and ones that are in the frequency domain start with the string "freq".  Similarly, gyroscope measurement 
 variables contain the string "Gyro" and accelerometer measurement variables contain the string "Accel".  
 
