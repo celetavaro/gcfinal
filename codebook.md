@@ -26,8 +26,12 @@ The script run_analysis.R peforms the following transformations on the raw data:
   
 
 To load the tidy_data.txt file in R, use the read.table() function since it was generated with write.table().
+i.e. read.table("tidy_data.txt", stringsAsFactors = FALSE)
 
 ## Variables
+
+There are a total of 81 variables and 180 total measurements.  The values for each measurement represent the mean of the
+representative variable
 
 Measurements in this dataset come from the Galaxy S smartphone's Gyroscope and Accelerometer in the X, Y, and Z planes
 (X, Y, Z appended to end of variable name in each direction). Variable names that are in the time domain start with the 
@@ -36,23 +40,97 @@ variables contain the string "Gyro" and accelerometer measurement variables cont
 
 Abbreviated names were chosen to avoid excessively long variable names.
 
-#### Identifiers:
+#### Identifier Variables:
 
   * subjectID: the integer value representing each subject's data. (integer values 1-30)
-  * activity:  the activity that the subject was doing during measurement (for activity codes see Activity List below)
+  * activity:  the activity that the subject was doing during measurement (for activity codes see Activity Code List below)
   
-#### Time Domain:
+#### Time Domain Variables:
 
+  * timeBodyAccelMeanX
+  * timeBodyAccelMeanY
+  * timeBodyAccelMeanZ
+  * timeBodyAccelStdX
+  * timeBodyAccelStdY
+  * timeBodyAccelStdZ
+  * timeGravityAccelMeanX
+  * timeGravityAccelMeanY
+  * timeGravityAccelMeanZ
+  * timeGravityAccelStdX
+  * timeGravityAccelStdY
+  * timeGravityAccelStdZ
+  * timeBodyAccelJerkMeanX
+  * timeBodyAccelJerkMeanY
+  * timeBodyAccelJerkMeanZ
+  * timeBodyAccelJerkStdX
+  * timeBodyAccelJerkStdY
+  * timeBodyAccelJerkStdZ
+  * timeBodyGyroMeanX
+  * timeBodyGyroMeanY
+  * timeBodyGyroMeanZ
+  * timeBodyGyroStdX
+  * timeBodyGyroStdY
+  * timeBodyGyroStdZ
+  * timeBodyGyroJerkMeanX
+  * timeBodyGyroJerkMeanY
+  * timeBodyGyroJerkMeanZ
+  * timeBodyGyroJerkStdX
+  * timeBodyGyroJerkStdY
+  * timeBodyGyroJerkStdZ
+  * timeBodyAccelMagMean
+  * timeBodyAccelMagStd
+  * timeGravityAccelMagMean
+  * timeGravityAccelMagStd
+  * timeBodyAccelJerkMagMean
+  * timeBodyAccelJerkMagStd
+  * timeBodyGyroMagMean
+  * timeBodyGyroMagStd
+  * timeBodyGyroJerkMagMean
+  * timeBodyGyroJerkMagStd
 
+#### Frequency Domain Variables:
 
-#### Frequency Domain:
-
-
-
+  * freqBodyAccelMeanX
+  * freqBodyAccelMeanY
+  * freqBodyAccelMeanZ
+  * freqBodyAccelStdX
+  * freqBodyAccelStdY
+  * freqBodyAccelStdZ
+  * freqBodyAccelMeanFreqX
+  * freqBodyAccelMeanFreqY
+  * freqBodyAccelMeanFreqZ
+  * freqBodyAccelJerkMeanX
+  * freqBodyAccelJerkMeanY
+  * freqBodyAccelJerkMeanZ
+  * freqBodyAccelJerkStdX
+  * freqBodyAccelJerkStdY
+  * freqBodyAccelJerkStdZ
+  * freqBodyAccelJerkMeanFreqX
+  * freqBodyAccelJerkMeanFreqY
+  * freqBodyAccelJerkMeanFreqZ
+  * freqBodyGyroMeanX
+  * freqBodyGyroMeanY
+  * freqBodyGyroMeanZ
+  * freqBodyGyroStdX
+  * freqBodyGyroStdY
+  * freqBodyGyroStdZ
+  * freqBodyGyroMeanFreqX
+  * freqBodyGyroMeanFreqY
+  * freqBodyGyroMeanFreqZ
+  * freqBodyAccelMagMean
+  * freqBodyAccelMagStd
+  * freqBodyAccelMagMeanFreq
+  * freqBodyBodyAccelJerkMagMean
+  * freqBodyBodyAccelJerkMagStd
+  * freqBodyBodyAccelJerkMagMeanFreq
+  * freqBodyBodyGyroMagMean
+  * freqBodyBodyGyroMagStd
+  * freqBodyBodyGyroMagMeanFreq
+  * freqBodyBodyGyroJerkMagMean
+  * freqBodyBodyGyroJerkMagStd
+  * freqBodyBodyGyroJerkMagMeanFreq
   
-
-  
-## Activity List:
+## Activity Code List:
   
   | activity | code |
   | --- | --- |
