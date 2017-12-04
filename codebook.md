@@ -17,6 +17,7 @@ The script run_analysis.R peforms the following transformations on the raw data:
   * re-assigns the integer values for the 'activity' variable to descriptive names
     * i.e. 1 is transformed to "walking"
   * assigns descriptive variable names and formats them for clarity/readability
+    * special characters like "-", "(", ")" were removed from variable names
     * values starting with "t" or "f" were transformed to start with "time" or "freq" respectively
     * values containing "Acc" were transformed to "Accel"
     * values containing "mean" or "std" were transformed to "Mean" and "Std" respectively for readability
