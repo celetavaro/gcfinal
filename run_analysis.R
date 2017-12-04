@@ -71,9 +71,8 @@
 
 library(dplyr)
       
-setMeans  <- dset %<%
-  group_by(subjectID, activity) %>%
-  summarise_all(funs(mean))
+setMeans  <- group_by(dset, subjectID, activity)
+setMeans <- summarise_all(setMeans, funs(mean))
   
 write.table(setMeans, file = "tidy_data.txt", row.names = FALSE, quote = FALSE)
       
