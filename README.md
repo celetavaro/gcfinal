@@ -21,4 +21,4 @@ The raw dataset can be obtained here:
 
 ### Packages
 
-This project uses the dplyr package
+This project uses the dplyr package (version 3.4.2)
