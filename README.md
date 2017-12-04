@@ -16,7 +16,7 @@ The raw dataset can be obtained here:
 | --- | --- |
 | README.md | this file |
 | codebook.md | the codebook for the project |
-| run_analysis.R | The R scripts that processes the data |
+| run_analysis.R | The R script that processes the data and creates tidy dataset |
 | tidy_data.txt | The tidy dataset produced by the run_analysis.R |
 
 ### Packages
