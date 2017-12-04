@@ -23,4 +23,7 @@ The raw dataset can be obtained here:
 
 This project uses the dplyr package (version 3.4.2)
 
-
+### Development Environment
+	* R version: 3.4.1
+	* MacOS version: 10.12.6
+	* Fedora26 Linux kernel: 4.13.16-200.fc26.x86_64
